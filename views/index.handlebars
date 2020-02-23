@@ -1,0 +1,32 @@
+<div class="card w-50 mx-auto mt-5 shadow rounded">
+  <div class="card-body">
+    <h4 class="card-title text-center text-monospace">Account Login</h4>
+    <p class="card-text">
+
+      <form action="/" method="POST">
+        <div class="form-group">
+          <input type="email" class="form-control w-75 mx-auto text-monospace" id="email" name="email"
+            placeholder="Your e-mail address" value="{{email}}">
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control w-75 mx-auto text-monospace" id="password" name="password"
+            placeholder="Your password" value="{{password}}">
+        </div>
+
+        <div class="form-group d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary shadow-sm text-monospace">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </p>
+
+    {{#if warning}}
+      <h6 class="text-center text-danger text-monospace">
+        Incorrect email or password
+      </h6>
+    {{/if}}
+
+  </div>
+</div>
